@@ -1,0 +1,155 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font Sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font Weights
+Default: 400
+
+- Line Heights
+Default: 1
+
+--- 02 COLORS
+
+- Primary: #e67e22
+- Tints: #fdf2e9
+- Shades: #cf711f
+- Accents:
+- Greys: #555 #333
+
+--- 03 SHADOWS
+
+--- 04 BORDER-RADIUS
+
+--- 05 WHITESPACE 
+
+- Spacing System (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+:root {
+  --primary-color: #e67e22;
+  --primary-bg-color: #fdf2e9;
+  --primary-font-color: #555;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 10px / 16px = 0.625 = 62,5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--primary-font-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  background-color: var(--primary-bg-color);
+  padding: 9.6rem 0;
+}
+
+.hero__container {
+  max-width: 130rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9.6rem;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.hero__title {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  color: #333;
+  margin-bottom: 3.2rem;
+}
+
+.hero__description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 0.8rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: var(--primary-font-color);
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: var(--primary-bg-color);
+  outline: 3px solid #fff;
+  outline-offset: -3px;
+}
+
+.hero__customers {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+
+.hero__customers img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid var(--primary-bg-color);
+}
+
+.hero__customers img:last-child {
+  margin: 0;
+}
+
+.hero__customers p {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.hero__customers span {
+  color: #cf711f;
+  font-weight: 700;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+/* UTILITY CLASSES */
+.margin-right-sm {
+  margin-right: 1.6rem;
+}
